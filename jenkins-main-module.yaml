@@ -1,0 +1,16 @@
+namespace: jenkins-main-module
+jenkins-main-module:
+  defines: runnable
+  metadata:
+    name: jenkins-main-module
+    description: The module that constitutes the main jenkins.war
+    icon: https://emojiapi.dev/api/v1/robot.svg
+  containers:
+    jenkins-main-module:
+      build: .
+  variables:
+    maven-version:
+      env: MAVEN_VERSION
+      type: string
+      description: The version of Maven to be used.
+      value: 3.9.4
